@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<!-- define document type-->
+
+<html lang="en">
+<!-- define page language-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jelle Uyttebroek</title>
+  <link rel="stylesheet" href="Portfolio_projects_design.css">
+  <link rel="icon" type="image/x-icon" href="../Portfolio Images/Jelle Uyttebroek logo wit.svg">
+</head>
+
+<!-- Lightbox Overlay -->
+<div id="lightbox" class="lightbox">
+  <div class="lightbox-content">  <!--Content container containing the figures-->
+    <div class="lightbox-media">
+      <img id="lightbox-img" src="" alt=""> <!-- image gets inserted here when clicked ==> jc changes the src and alt text-->
+    </div>
+    <div class="lightbox-info"> <!--info container containing the text ==> again skeleton; jc changes the content-->
+      <h3 id="lightbox-title"></h3>
+      <p id="lightbox-desc"></p>
+    </div>
+  </div>
+</div>
+<!--Body html-->
+<body>
+  <header>
+    <h1>
+      <a href="../PORTFOLIO WEBSITE.html#Home" > <img src="../Portfolio Images/Jelle Uyttebroek logo wit.png" alt="Logo jelle Uyttebroek" class="logo" width="5%"> </a> 
+    </h1>
+    <nav>
+      <a href="../PORTFOLIO WEBSITE.html#about">About me</a>
+      <a href="../PORTFOLIO WEBSITE.html#experience and skills">Experience and skills</a>
+      <a href="../PORTFOLIO WEBSITE.html#projects">Projects</a>
+      <a href="../PORTFOLIO WEBSITE.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="project-page">
+    <!-- Main content (left, no card) -->
+    <div class="project-content">
+          <h2>Master thesis: Enhancing the end-of-line test of the Powershift Hub: a multibody dynamic approach</h2>
+          <figure>
+            <img src="../Portfolio Images/Project - Thesis/EOL_picture.png" alt="MBD model">
+          </figure>
+          <p align="justify">
+            As the final part of my Master in Mechanical Engineering at KU Leuven, I did my thesis in collaboration with
+            Classified Cycling, a manufacturer of advanced bicycle drivetrain components. Together with a colleague, I
+            worked on improving the end-of-line (EOL) test of the Powershift Hub, the company’s flagship two-stage
+            planetary gear system that enables two distinct operating ratios. The objective was to reduce the number of
+            faulty hubs passing the current test.
+          </p>
+
+          <h2>Project Objective</h2>
+          <p align="justify">
+            The Powershift Hub contains shafts, bearings, a planetary gear train, an actuation module, and a clutch
+            mechanism. While the existing EOL test was designed to measure efficiency and functionality, it struggled to
+            reliably detect subtle manufacturing defects. Our task was to enhance the diagnostic capability of the test
+            setup, ensuring earlier and more accurate fault detection.
+          </p>
+
+          <h2>Approach</h2>
+          <p align="justify">
+            We initially explored a data-driven condition monitoring strategy, analyzing large sets of EOL test data using
+            machine learning techniques. However, shortcomings such as poor labeling and uncertainties about whether faults
+            originated during production or later in use limited this approach. Limited collaboration with the company
+            required different approaches.
+          </p>
+          <p>As a result, the project shifted towards a model-based approach:</p>
+          <ul>
+            <li>Developed a multibody dynamic (MBD) model of the Powershift Hub in Simcenter Motion, capturing both operating ratios (direct drive and 0.7 ratio with active gear movement).</li>
+            <li>Simulated different manufacturing faults and evaluated their influence on measurable outputs such as torque, angular velocity, and acceleration.</li>
+            <li>Used the results to guide sensor selection and propose improvements to the EOL test bench design.</li>
+          </ul>
+
+          <figure>
+            <img src="../Portfolio Images/Project - Thesis/PH MBDM.png" alt="MBD model">
+            <figcaption>Multibody dynamic model of the Powershift Hub in Simcenter Motion.</figcaption>
+          </figure>
+
+          <h2>Results</h2>
+          <ul>
+            <li>The MBD simulations identified weaknesses in the current setup and highlighted fault signatures that were invisible to the existing sensors.</li>
+            <li>Demonstrated the benefits of the multibody dynamic model by means of a sensor placement analysis.</li>
+            <li>Delivered recommendations for enhancing the diagnostic power of the EOL test, forming the basis for future integration of condition monitoring in Classified’s production line.</li>
+          </ul>
+
+          <h2>Reflection</h2>
+          <p align="justify">
+            This thesis strengthened my expertise in dynamic modeling, vibration analysis, condition monitoring, and
+            machine learning while also providing experience in industry collaboration and problem-solving under data
+            limitations. Despite challenges such as restricted access to real-world sensor data, the virtual simulations
+            provided meaningful insights and actionable recommendations for the company.
+          </p>
+        </div>
+
+        <!-- Sidebar card (right) -->
+        <aside class="project-info">
+          <h3 align="center">Project Info</h3>
+          <p><strong>Project Type:</strong> University project</p>
+          <p><strong>Duration:</strong> 7 months</p>
+          <p><strong>Team #:</strong> 2</p>
+          <p><strong>Year:</strong> 2024-2025</p>
+          <p><strong>Tags:</strong></p>
+          <div class="skills">
+            <span class="skill-tag">Machine learning</span>
+            <span class="skill-tag">Condtion monitoring</span>
+            <span class="skill-tag">Multibody dynamic modelling</span>
+            <span class="skill-tag">Signal processing</span>
+          </div>
+           <p><strong>Tools:</strong></p>
+          <div class="skills">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Matlab</span>
+            <span class="skill-tag">Simcenter 3D Motion</span>
+            <span class="skill-tag">Simcenter NX</span>
+          </div>
+          <figure>
+            <img src="../Portfolio Images/KULeuven logo.png" alt="KULeuven logo" style="max-width:70%;" align="left">
+            <a href="https://www.classified-cycling.cc/"><img src="../Portfolio Images/Project - Thesis/Classified logo.png" alt="Classified logo" style="max-width:50%;" align="left"></a>
+          </figure>
+        </aside>
+      </section>
+
+      <div class="project-media-grid">
+        <!-- Row 1 -->
+        <figure>
+          <video autoplay loop muted playsinline>
+            <source src="../Portfolio Videos/Project - Thesis/PH ratio 1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <figcaption>Close up simulation ratio 1 - no gear meshing</figcaption>
+        </figure>
+
+        <figure>
+          <video autoplay loop muted playsinline>
+            <source src="../Portfolio Videos/Project - Thesis/PH MBDM ratio 1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <figcaption>Time domain simulation of the angular accelerations - ratio 1</figcaption>
+        </figure>
+
+        <figure>
+          <img src="../Portfolio Images/Project - Thesis/DS_misalignment_RZ_rotating.png" alt="Bearing misaligment spectrum">
+          <figcaption>Frequency spectrum of angular accelerations with different levels of (angular) bearing misalignment - Ratio 1</figcaption>
+        </figure>
+
+        <!-- Row 2 -->
+        <figure>
+          <video autoplay loop muted playsinline>
+            <source src="../Portfolio Videos/Project - Thesis/PH ratio 07.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <figcaption>Close up simulation ratio 0.7 - gear meshing</figcaption>
+        </figure>
+
+        <figure>
+          <video autoplay loop muted playsinline>
+            <source src="../Portfolio Videos/Project - Thesis/PH MBDM ratio 07.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        <figcaption>Time domain simulation of the angular accelerations - ratio 0.7</figcaption>
+        </figure>
+
+        <figure>
+          <img src="../Portfolio Images/Project - Thesis/planet misalignment spectrum.png" alt="Planet misalignment spectrum">
+          <figcaption>Frequency spectrum of angular accelerations with different levels of (angular) gear misalignment - Ratio 0.7</figcaption>
+        </figure>
+      </div>
+
+      <!-- start the Media Gallery-->
+      <section>
+          <div class="project-media">
+    
+
+            <h2>Media gallery</h2>
+            <div class="image-gallery">
+              <figure data-title="End-of-line test" data-desc="Tests functionality and efficiency with two motor-driven sides, each equipped with a rotary encoder and a counter-torque load cell for power measurement.">
+                <img src="../Portfolio Images/Project - Thesis/EOL_picture.png" alt="End-of-line test powershift hub classified">
+                <figcaption>End-of-line test</figcaption>
+              </figure>
+              <figure data-title="Cross section of the Powershift Hub" data-desc="Cross-section of the powershift hub showing core components: bearings, planetary stage, actuator module, and clutch mechanism.">
+                <img src="../Portfolio Images/Project - Thesis/Cross section PH.png" alt="Powershift Hub">
+                <figcaption>Cross section of the Powershift Hub</figcaption>
+              </figure>
+              <figure data-title="Vibration spectrum of a healthy Hub" data-desc="Torsional vibration spectrum of the 0.7 gear ratio (gear meshing active). Due to the symmetry and working principle of the powershift hub, some harmonics are suppressed while others are amplified.">
+                <img src="../Portfolio Images/Project - Thesis/healthy_PGT.png" alt="Healthy hub vibration spectrum">
+                <figcaption>Torsional vibration spectrum of a healthy Hub</figcaption>
+              </figure>
+
+
+              <figure data-title="Frequency spectrum of angular accelerations with different levels of (angular) gear misalignment - Ratio 0.7" data-desc="Frequency spectrum of the hub’s angular acceleration at the 0.7 ratio (gear meshing active). With increasing levels of planet gear misalignment, previously suppressed gear mesh frequencies reappear due to the loss of symmetry. Sidebands around the gear mesh frequencies (GMFs) also emerge, indicating the influence of misalignment on the dynamic response.">
+                <img src="../Portfolio Images/Project - Thesis/planet misalignment spectrum.png" alt="faulty hub vibration spectrum - 0.7 ratio">
+                <figcaption>Frequency spectrum of angular accelerations with different levels of (angular) gear misalignment - Ratio 0.7</figcaption>
+              </figure>
+              <figure data-title="Frequency spectrum of angular accelerations with different levels of (angular) bearing misalignment - Ratio 1" data-desc="Frequency spectrum of the hub’s angular acceleration at the 1.0 ratio (no gear meshing active). Different levels of bearing misalignment are introduced, leading to a stronger presence of the shaft’s rotational frequency and its harmonics in the response.">
+                <img src="../Portfolio Images/Project - Thesis/DS_misalignment_RZ_rotating.png" alt="faulty hub vibration spectrum - 1 ratio">
+                <figcaption>Frequency spectrum of angular accelerations with different levels of (angular) bearing misalignment - Ratio 1</figcaption>
+              </figure>
+
+
+              <figure data-title="Changes in transmission error (TE) around the gear mesh frequency" data-desc="Changes in transmission error (TE) around the gear mesh frequency for a hub with bearing misalignment. The misalignment increases the first harmonic of the gear mesh frequency and generates sidebands at the bearing’s rotational speed, revealing how defects influence the dynamic behavior of the drivetrain.">
+                <img src="../Portfolio Images/Project - Thesis/BM_TE_1xGMF.png" alt="BM TE graph">
+                <figcaption>Changes in transmission error (TE) around the gear mesh frequency</figcaption>
+              </figure>
+              <figure data-title="Sensor placement on MBDM" data-desc="Two virtual sensors are investigated, COS and DOS. The two sensors are located near bearings or planetary stage giving the same diagnostic information embedded in different signal.">
+                <img src="../Portfolio Images/Project - Thesis/sensor_placement.png" alt="Sensor placement">
+                <figcaption>Sensor placement on MBDM</figcaption>
+              </figure>
+              <figure data-title="Sensor placement analysis using vibration response data. (no radial load)" data-desc="Based on the simulation results of the multi-body dynamic model (MBDM), the sensitivity of different features (such as the shaft’s rotational frequency, denoted as pk_RF) is evaluated for various fault types and sensor locations (COS & DOS). This analysis highlights which sensor positions offer higher sensitivity for early fault detection and identifies the most relevant features to monitor for diagnosing specific faults. This is performed for a setup where the Hub is not loaded in radial way.">
+                <img src="../Portfolio Images/Project - Thesis/Features_effects.png" alt="Sensor placement analysis">
+                <figcaption>Sensor placement analysis using vibration response data.</figcaption>
+              </figure>
+            </div>
+          </div>
+
+      </section>
+ 
+  <footer>
+    <figure><img src="../Portfolio Images/Jelle Uyttebroek logo wit.svg" alt="Logo jelle Uyttebroek" width="1%"></figure>
+    <p>&copy; 2025 Jelle Uyttebroek. All rights reserved.</p>
+  </footer>
+</body>
+
+<!-- JAVASCRIPTS -->
+<!--Javascript for scrolling detection for header adjustments-->
+<script>
+  let lastScrollY = window.scrollY;
+  const header = document.querySelector("header");
+  const threshold = 50; // how much you must scroll before toggle
+  let ticking = false;
+
+  window.addEventListener("scroll", () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const currentScrollY = window.scrollY;
+
+        if (Math.abs(currentScrollY - lastScrollY) > threshold) {
+          if (currentScrollY > lastScrollY) {
+            // scrolling down enough → hide header
+            header.classList.add("hide");
+          } else {
+            // scrolling up enough → show header
+            header.classList.remove("hide");
+          }
+          lastScrollY = currentScrollY;
+        }
+
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+</script>
+
+<script>
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const lightboxTitle = document.getElementById("lightbox-title");
+  const lightboxDesc = document.getElementById("lightbox-desc");
+
+  // Attach click events to all gallery figures
+  document.querySelectorAll(".image-gallery figure").forEach(fig => {
+    fig.addEventListener("click", () => {
+      const img = fig.querySelector("img");
+      if (img) {
+        // Set image
+        lightboxImg.src = img.src;
+
+        // Set title: use data-title if it exists, else fallback to "Figure"
+        lightboxTitle.textContent = fig.dataset.title || "Figure";
+
+        // Set description: use data-desc if it exists, else fallback to figcaption text
+        lightboxDesc.textContent = fig.dataset.desc || fig.querySelector("figcaption")?.textContent || "";
+
+        // Show lightbox
+        lightbox.style.display = "flex";
+      }
+    });
+  });
+
+  // Close lightbox when clicking outside the content
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = "none";
+    }
+  });
+</script>
+
+
+
+</html>

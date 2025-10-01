@@ -1,0 +1,250 @@
+/* CSS File: Portofolio webpage Jelle Uyttebroek */
+
+/* General page style */
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  /*background: #f9f9f9;*/
+  color: #333;
+}
+
+/*Header fixed at top */
+header {
+  background: #222;
+  color: #fff;
+  padding: 0rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;            /* make header a flex container */
+  justify-content: space-between; /* push items to edges */
+  align-items: center;      /* vertically center items */
+
+  transition: transform 0.3s ease; /* smooth hide/show */
+}
+
+header.hide { /*use the .XXXX when class XXX is defined in html using class="XXX"*/
+  transform: translateY(-100%); /* slide header up out of view */
+}
+
+header h1 a {
+    display: flex;          /* row layout */
+    align-items: center;    /* vertical centering */
+    gap: 0.5rem;            /* space between logo and text */
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Quantico', sans-serif;
+    font-weight: bold;
+}
+
+header nav a {
+  color: #fff;
+  margin-left: 20px;  /* spacing between links */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+  header h1 a .logo {
+    width: 10%;           /* adjust the logo size */
+    height: auto;
+  }
+
+/*Different layout when there is hover action*/
+header nav a:hover {
+  text-decoration: underline;
+}
+
+section {
+  padding: 3rem 10%;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+/*Project video styling*/
+.project-media-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 2rem auto;   /* center the grid */
+  width: 80%;          /* take 80% of the viewport width */
+  max-width: 1400px;   /* optional: prevent it from stretching too much on huge screens */
+  justify-content: center;
+}
+
+.project-media-grid figure {
+  text-align: center;
+}
+
+.project-media-grid video,
+.project-media-grid img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: block;
+}
+
+.project-media-grid figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #444;
+  text-align: center;
+}
+
+
+/*Project page specifics*/
+.project-page {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* main text bigger, sidebar smaller */
+  gap: 2rem;
+  padding: 2rem 10%;
+  align-items: start;
+}
+
+/* Left side (just normal flowing text) */
+.project-content {
+  line-height: 1.7;
+}
+
+/* Right side (card) */
+.project-info {
+  background: #f2f2f2;  /* light gray */
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.project-info h3 {
+  margin-bottom: 1rem;
+}
+
+.project-info p {
+  margin: 0.3rem 0;
+}
+
+.skills {
+  margin-top: 1rem;
+}
+
+.skill-tag {
+  display: inline-block;
+  background: #ddd;
+  color: #333;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 15px;
+  margin: 0.2rem;
+  font-weight: 500;
+}
+
+
+/* Inline figures */
+figure {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+figure img {
+  max-width: 80%;
+
+}
+
+figure figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+
+/*image gallery settings*/
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.image-gallery img:hover {
+  transform: translateY(-5px);
+}
+
+.image-gallery img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.image-gallery figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+}
+
+/* Overlay */
+.lightbox {
+  display: none; /* hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  z-index: 2000;
+
+  justify-content: center;
+  align-items: center;
+}
+
+/* Content container */
+.lightbox-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* left: image, right: card */
+  gap: 2rem;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 80%;      /* XX% of screen */
+  max-width: 1000px;
+  max-height: 80%;
+  overflow: auto;
+}
+
+/* Left side: image */
+.lightbox-media img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Right side: description card */
+.lightbox-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lightbox-info h3 {
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.lightbox-info p {
+  line-height: 1.4;
+  color: #444;
+}
+
+/*Footer section*/
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #222;
+  color: #fff;
+  margin-top: 2rem;
+}
