@@ -1,0 +1,284 @@
+  /* CSS File: Portofolio webpage Jelle Uyttebroek */
+
+  /* General page style */
+  /* Global Styles */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background: #f9f9f9;
+    color: #333;
+  }
+
+  /*Header fixed at top */
+  header {
+    background: #222;
+    color: #fff;
+    padding: 0rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;            /* make header a flex container */
+    justify-content: space-between; /* push items to edges */
+    align-items: center;      /* vertically center items */
+  }
+
+  header h1 a .logo {
+    width: 10%;           /* adjust the logo size */
+    height: auto;
+  }
+
+  header h1 a {
+    display: flex;          /* row layout */
+    align-items: center;    /* vertical centering */
+    gap: 0.5rem;            /* space between logo and text */
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Quantico', sans-serif;
+    font-weight: bold;
+  }
+
+  header nav a {
+    color: #fff;
+    margin-left: 20px;  /* spacing between links */
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  /*Different layout when there is hover action*/
+  header nav a:hover {
+    text-decoration: underline;
+  }
+
+  section {
+    padding: 3rem 10%;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    color: #222;
+  }
+
+  /* About Section */
+  #about .about-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;           /* space between text and image */
+    flex-wrap: wrap;      /* allows wrapping on smaller screens */
+  }
+
+ .about-image {
+  width: 100%;
+  max-width: 350px;  /* adjust as needed */
+  overflow: hidden;  /* hide overflowing images */
+  margin: auto;
+}
+
+.carousel {
+  display: flex;
+  animation: slide 12s infinite; /* infinite scrolling animation */
+}
+
+.carousel figure {
+  min-width: 100%;
+  margin: 0;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Keyframes for scrolling */
+@keyframes slide {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(0); }
+  25% { transform: translateX(-100%); }
+  45% { transform: translateX(-100%); }
+  50% { transform: translateX(-200%); }
+  70% { transform: translateX(-200%); }
+  75% { transform: translateX(-300%); }
+  95% { transform: translateX(-300%); }
+  100% { transform: translateX(0); }
+}
+
+  #about .about-text {
+    flex: 1;              /* text takes remaining space */
+    min-width: 250px;     /* prevents text from being too narrow */
+  }
+
+
+  /*Image in about me section*/
+  .about-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; /* space between image and button */
+  }
+
+  /*CV button in about me section*/
+  .cv-button {
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    background: #222;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+
+  .cv-button:hover {
+    background: #444;
+  }
+
+  /* Projects Grid */
+  #projects .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));/*repeat tells the amount of cards in the row*/
+    gap: 1.5rem;
+  }
+
+  .card { /*Defines the card layout*/
+    display: block;              /* makes the <a> behave like a block element */
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;  /*defines the cuttoff of the edges (roundness radius)*/
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+    text-decoration: none;       /* remove link underline */
+    color: inherit;              /* keep text color the same */
+    cursor: pointer;             /* make mouse look clickable */
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+  .card img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  /* Contact Section */
+  #contact {
+    padding: 3rem 10%;
+    background: #f9f9f9;   /* light background (like in your screenshot) */
+    color: #333;
+  }
+
+  #contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #222;
+  }
+
+  #contact p {
+    margin: 0.8rem 0;
+    font-size: 1.1rem;
+  }
+
+  #contact .contact-list i {
+    margin-right: 0.8rem;
+    color: #444;           /* icon color */
+    width: 20px;           /* aligns icons nicely */
+    text-align: center;
+  }
+
+  #contact a {
+    color: #222;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  #contact a:hover {
+    text-decoration: underline;
+  }
+
+
+  /*Footer section*/
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #222;
+    color: #fff;
+    margin-top: 2rem;
+  }
+
+  /*Video formats*/
+  .hero-video {
+    position: relative;
+    height: 100vh; /* full screen */
+    width: 80%;
+    overflow: hidden;
+  }
+
+  .hero-video video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+
+  .hero-video .overlay {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 0px 2px 8px rgba(0,0,0,0.7);
+    text-align: center;
+  }
+
+  .hero-video .overlay h1 {
+    font-size: 3rem;
+    margin: 0.5rem 0;
+  }
+
+  .hero-video .overlay p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .scroll-down {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+
+  .scroll-down:hover {
+    background: white;
+    color: #222;
+  }
+
+
+.info {
+  margin-top: 1rem;
+}
+
+.info-tag {
+  display: inline-block;
+  background: #ddd;
+  color: #333;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 15px;
+  margin: 0.2rem;
+  font-weight: 500;
+}
+
+
