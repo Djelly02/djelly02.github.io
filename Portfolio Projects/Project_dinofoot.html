@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<!-- define document type-->
+
+<html lang="en">
+<!-- define page language-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jelle Uyttebroek</title>
+  <link rel="stylesheet" href="Portfolio_projects_design.css">
+  <link rel="icon" type="image/x-icon" href="../Portfolio Images/Jelle Uyttebroek logo wit.svg">
+</head>
+
+<!-- Lightbox Overlay -->
+<div id="lightbox" class="lightbox">
+  <div class="lightbox-content">  <!--Content container containing the figures-->
+    <div class="lightbox-media">
+      <img id="lightbox-img" src="" alt=""> <!-- image gets inserted here when clicked ==> jc changes the src and alt text-->
+    </div>
+    <div class="lightbox-info"> <!--info container containing the text ==> again skeleton; jc changes the content-->
+      <h3 id="lightbox-title"></h3>
+      <p id="lightbox-desc"></p>
+    </div>
+  </div>
+</div>
+<!--Body html-->
+<body>
+  <header>
+    <h1>
+      <a href="../index.html#Home" > <img src="../Portfolio Images/Jelle Uyttebroek logo wit.png" alt="Logo jelle Uyttebroek" class="logo" width="5%"> </a> 
+    </h1>
+    <nav>
+      <a href="../index.html#about">About me</a>
+      <a href="../index.html#experience and skills">Experience and skills</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="project-page">
+    <!-- Main content (left, no card) -->
+    <div class="project-content">
+          <h2>Dinofoot: Ostrich-Inspired Multi-Segmented Robot Feet</h2>
+          <figure>
+            <img src="../Portfolio Images/Project - Dinofoot/test setup.png" alt="Test setup">
+          </figure>
+          <p align="justify">
+            As part of the Integrated Project in the Master of Mechanical Engineering at KU Leuven, I worked in a team of four students under the supervision of Prof. Badri-Spröwitz.
+            Our task was to investigate a self-chosen research question that was testable and built as an extension of BirdBot, a tendon-driven bipedal robot developed by our professor.
+            BirdBot achieves high efficiency compared to fully motor-actuated robots by storing energy in spring tendons during the stance phase and releasing it back into the system at toe-off.
+          </p>
+          <p align="justify">
+            We decided to explore the impact of an ostrich-inspired multi-segmented robotic foot as an extension of BirdBot.
+            The aim was to investigate how different foot designs influence locomotion dynamics and shifts in the center of pressure (COP).
+          </p>
+
+          <h2>Project Objective</h2>
+          <p align="justify">
+            Most bipedal robots rely on simple or rigid feet, which limits their locomotion efficiency. 
+            Our project explored how introducing two-segment toe designs could enhance gait stability and energy efficiency by dynamically shifting the COP during stance.
+          </p>
+          <p align="justify">
+            The position of the COP beneath the robot’s foot determines how energy is injected into the system.
+            Energy can be directed into the body, causing oscillations of the center of mass (COM), or into the swing phase of the leg, resulting in faster leg swings and reduced COM oscillations. 
+            Our goal was to investigate how the COP influences this energy injection and whether different foot designs could alter this distribution.
+          </p>
+
+          <p align="justify">
+            To achieve this, we set out to design, build, and experimentally validate novel foot prototypes for the original BirdBot design.
+          </p>
+
+          <h2>Approach</h2>
+          <ul>
+            <li><strong>Research:</strong>
+              Conducted a literature review on ostrich and emu biomechanics and tendon-driven robotic legs. Defined research questions and assessed feasibility given time constraints.
+            </li>
+
+            <li><strong>Design:</strong>
+              Designed and 3D-printed two alternative two-segment toe mechanisms with distinct cam geometries. The redesigned robot, named StrutBot, incorporated these features.
+            </li>
+            <li><strong>Sensor implementation:</strong>
+              Integrated load cells and camera-based motion tracking to measure tendon forces, COP shifts, and joint kinematics. 
+              The test setup included synchronization of multiple sensor systems for accurate post-processing. 
+              An Arduino was used to read load cell data and trigger the camera with a light source.
+            </li>
+            <li><strong>Control:</strong>
+              Adapted existing motor control and schematics from BirdBot to operate StrutBot.
+            </li>
+            <li><strong>Prototyping:</strong>
+              Implemented Dynamixel actuators, 3D-printed body parts, and custom joints, along with novel tendon tensioning mechanisms to replicate biological flexion–extension behavior.
+            </li>
+            <li><strong>Testing:</strong>
+              Conducted treadmill-based experiments to capture gait dynamics under controlled conditions.
+            </li>
+          </ul>
+
+          <!--3 videos naast elkaar-->
+
+          <h2>Results</h2>
+          <ul>
+            <li>Built and tested two robotic foot prototypes with different joint cam radii, producing distinct COP trajectories during stance.</li>
+            <li>Demonstrated that increasing the radius of the proximal cam led to earlier lifting of proximal segments, dynamically shifting the COP toward distal segments.</li>
+            <li>Showed that COP shifts correlated with changes in energy injection patterns, highlighting the potential of proper foot design for more efficient and versatile locomotion.</li>
+            <li>Identified areas for improvement in data collection methods and mechanical design for future iterations.</li>
+          </ul>
+
+          <h2>Reflection</h2>
+          <p align="justify">
+            This project strengthened my skills and passion for mechatronics, experimental robotics, and biomechanics-inspired design. 
+            Working on the full development cycle required balancing CAD design, mechanical prototyping, electronics integration, and experimental validation. 
+            The results emphasized how subtle design choices can significantly influence locomotion dynamics in robotic systems.
+          </p>
+        </div>
+
+        <!-- Sidebar card (right) -->
+        <aside class="project-info">
+          <h3 align="center">Project Info</h3>
+          <p><strong>Project Type:</strong> University project</p>
+          <p><strong>Duration:</strong> 4.5 months</p>
+          <p><strong>Team #:</strong> 4</p>
+          <p><strong>Year:</strong> 2024</p>
+          <p><strong>Tags:</strong></p>
+          <div class="skills">
+            <span class="skill-tag">Mechanical design</span>
+            <span class="skill-tag">Prototyping</span>
+            <span class="skill-tag">Modelling</span>
+            <span class="skill-tag">Data aquisition</span>
+            <span class="skill-tag">Sensor integration</span>
+            <span class="skill-tag">Signal processing</span>
+          </div>
+           <p><strong>Tools:</strong></p>
+          <div class="skills">
+            <span class="skill-tag">Onshape</span>
+            <span class="skill-tag">Matlab</span>
+            <span class="skill-tag">Arduino</span>
+            <span class="skill-tag">Latex</span>
+          </div>
+          <figure>
+            <img src="../Portfolio Images/KULeuven logo.png" alt="KULeuven logo" style="max-width:70%;" align="left">
+          </figure>
+        </aside>
+      </section>
+
+      <div class="project-media-grid-dinofoot">
+        <!-- left video -->
+        <figure>
+          <video autoplay loop muted playsinline>
+            <source src="../Portfolio Videos/Project - Dinofoot/dinofoot design A.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <figcaption>Strutbot test cycle - design A</figcaption>
+        </figure>
+        <figure>
+          <video autoplay loop muted playsinline>
+            <source src="../Portfolio Videos/Project - Dinofoot/dinofoot design B.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        <figcaption>Strutbot test cycle - design B</figcaption>
+        </figure>
+        <figure>
+          <video autoplay loop muted playsinline>
+            <source src="../Portfolio Videos/Project - Dinofoot/close up design B.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <figcaption>Close up foot motion - design B</figcaption>
+        </figure>
+        <figure>
+          <video autoplay loop muted playsinline>
+            <source src="../Portfolio Videos/Project - Dinofoot/close up design A.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <figcaption>Close up foot motion design A</figcaption>
+        </figure>
+      </div>
+
+      <!-- start the Media Gallery-->
+      <section>
+          <div class="project-media">
+    
+
+            <h2>Media gallery</h2>
+            <div class="image-gallery">
+              <figure data-title="Strutbot" data-desc="Prototype used to investigate the influence of COP changes linked to foot design and energy injection. Strutbot.">
+                <img src="../Portfolio Images/Project - Dinofoot/strutbot posing.png" alt="Strutbot posing">
+                <figcaption>Strutbot</figcaption>
+              </figure>
+              <figure data-title="Strutbot CAD model" data-desc="A full CAD model of Strutbot is made.">
+                <img src="../Portfolio Images/Project - Dinofoot/full cad design.png" alt="Strutbot CAD model">
+                <figcaption>Strutbot CAD model</figcaption>
+              </figure>
+              <figure data-title="Tendon map" data-desc="Multiple tendons are required to be able to let the robot walk. This tendon-cam design is based on Birdbot and ostrich inspired, mimicking tendon-joint structures in animals.">
+                <img src="../Portfolio Images/Project - Dinofoot/tendon map.png" alt="Strutbot tendon map">
+                <figcaption>Tendon map</figcaption>
+              </figure>
+              <figure data-title="Critical joint movement" data-desc="The graph shows the critical movement of joint j5 for different foot designs. It is visible that the red curve goes up earlier than the blue curve, showing earlier segment rise due to different center of pressure movement. Matlab visualisation of the leg are provided for better understanding. ">
+                <img src="../Portfolio Images/Project - Dinofoot/core joint movement.png" alt="Joint j5 movement">
+                <figcaption>Critical joint movement</figcaption>
+              </figure>
+              <figure data-title="Cam library" data-desc="Different cam designs used in the robot. Cam design is a critical part of the proper working of the tendon-driven robot. The cam radii defines the amount of torque is applied on the joints, required to make the robot stand and walk.">
+                <img src="../Portfolio Images/Project - Dinofoot/cam library.png" alt="Strutbot cam library">
+                <figcaption>Cam library</figcaption>
+              </figure>
+              <figure data-title="Test setup" data-desc="The test setup used to investigate the problem includes a controllable treadmill, a guiding rail for the robot, an Arduino module, a camera calibration frame, and the StrutBot itself.">
+                <img src="../Portfolio Images/Project - Dinofoot/test setup.png" alt="Test setup 2">
+                <figcaption>Test setup</figcaption>
+              </figure>
+              <figure data-title="Strutbot" data-desc="Leg design and documentation of location of cams inside the leg. Different designs of cam j5 where implemented (design A and B had different cam radii) leading to different center of pressure behavior.">
+                <img src="../Portfolio Images/Project - Dinofoot/leg and cam layout.png" alt="leg and cam layout">
+                <figcaption>Leg and cam design</figcaption>
+              </figure>
+              <figure data-title="Test setup" data-desc="The test setup used to investigate the problem includes a controllable treadmill, a guiding rail for the robot, an Arduino module, a camera calibration frame, and the StrutBot itself.">
+                <img src="../Portfolio Images/Project - Dinofoot/side view walking.png" alt="Test setup 3">
+                <figcaption>Test setup</figcaption>
+              </figure>
+              <figure data-title="Foot design" data-desc="A key requirement of the project was the redesign of the foot with multiple segments, ensuring proper flexing and extending behavior. The design was adapted to meet these requirements">
+                <img src="../Portfolio Images/Project - Dinofoot/flexing foot design.png" alt="Strutbot foot design">
+                <figcaption>Foot design</figcaption>
+              </figure>
+
+              <figure data-title="Test setup" data-desc="The test setup used to investigate the problem includes a controllable treadmill, a guiding rail for the robot, an Arduino module, a camera calibration frame, and the StrutBot itself.">
+                <img src="../Portfolio Images/Project - Dinofoot/Treadmill setup.png" alt="Test setup">
+                <figcaption>Test setup</figcaption>
+              </figure>
+              <figure data-title="Electrical schematic" data-desc="The electrical schematic of the test setup. Four Dynamixels, two loadcells and camera interaction LED for syncronization all coupled to the PC.">
+                <img src="../Portfolio Images/Project - Dinofoot/electrical schematic of test setup.png" alt="Electrical schematic">
+                <figcaption>Electrical schematic</figcaption>
+              </figure>
+              <figure data-title="Kinematic tracking system" data-desc="The joint movements are tracked using a camera setup. The joints are tracked with external software.">
+                <img src="../Portfolio Images/Project - Dinofoot/kinematics.png" alt="Kinematics tracking system">
+                <figcaption>Kinematics tracking system</figcaption>
+              </figure>
+              <figure data-title="Body movement X-direction (horizontal)" data-desc="The COM movement in horizontal direction is tracked. The difference in horizontal movement showing the influence of foot design in energy injection. Higher movement comes down to more energy injected into COM movement.">
+                <img src="../Portfolio Images/Project - Dinofoot/body movement X.png" alt="Body movement X">
+                <figcaption>Body movement X-direction (horizontal)</figcaption>
+              </figure>
+              <figure data-title="Body movement Y-direction (vertical)" data-desc="The COM movement in vertical direction is tracked. There is a difference in horizontal movement showing the influence of foot design in energy injection. Higher movement comes down to more energy injected into COM movement.">
+                <img src="../Portfolio Images/Project - Dinofoot/body movement Y.png" alt="Body movement Y">
+                <figcaption>Body movement Y-direction (vertical)</figcaption>
+              </figure>
+
+
+            </div>
+          </div>
+
+      </section>
+ 
+  <footer>
+    <figure><img src="../Portfolio Images/Jelle Uyttebroek logo wit.svg" alt="Logo jelle Uyttebroek" width="1%"></figure>
+    <p>&copy; 2025 Jelle Uyttebroek. All rights reserved.</p>
+  </footer>
+</body>
+
+<!-- JAVASCRIPTS -->
+<!--Javascript for scrolling detection for header adjustments-->
+<script>
+  let lastScrollY = window.scrollY;
+  const header = document.querySelector("header");
+  const threshold = 50; // how much you must scroll before toggle
+  let ticking = false;
+
+  window.addEventListener("scroll", () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const currentScrollY = window.scrollY;
+
+        if (Math.abs(currentScrollY - lastScrollY) > threshold) {
+          if (currentScrollY > lastScrollY) {
+            // scrolling down enough → hide header
+            header.classList.add("hide");
+          } else {
+            // scrolling up enough → show header
+            header.classList.remove("hide");
+          }
+          lastScrollY = currentScrollY;
+        }
+
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+</script>
+
+<script>
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const lightboxTitle = document.getElementById("lightbox-title");
+  const lightboxDesc = document.getElementById("lightbox-desc");
+
+  // Attach click events to all gallery figures
+  document.querySelectorAll(".image-gallery figure").forEach(fig => {
+    fig.addEventListener("click", () => {
+      const img = fig.querySelector("img");
+      if (img) {
+        // Set image
+        lightboxImg.src = img.src;
+
+        // Set title: use data-title if it exists, else fallback to "Figure"
+        lightboxTitle.textContent = fig.dataset.title || "Figure";
+
+        // Set description: use data-desc if it exists, else fallback to figcaption text
+        lightboxDesc.textContent = fig.dataset.desc || fig.querySelector("figcaption")?.textContent || "";
+
+        // Show lightbox
+        lightbox.style.display = "flex";
+      }
+    });
+  });
+
+  // Close lightbox when clicking outside the content
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = "none";
+    }
+  });
+</script>
+
+
+
+</html>
