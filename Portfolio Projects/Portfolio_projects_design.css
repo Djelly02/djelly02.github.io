@@ -66,8 +66,8 @@ h2 {
   color: #222;
 }
 
-/*Project video styling*/
-.project-media-grid {
+/*Project video styling - thesis project*/
+.project-media-grid-thesis {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
@@ -77,23 +77,51 @@ h2 {
   justify-content: center;
 }
 
-.project-media-grid figure {
+.project-media-grid-thesis figure {
   text-align: center;
 }
 
-.project-media-grid video,
-.project-media-grid img {
+.project-media-grid-thesis video,
+.project-media-grid-thesis img {
   width: 100%;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   display: block;
 }
 
-.project-media-grid figcaption {
+.project-media-grid-thesis figcaption {
   margin-top: 0.5rem;
   font-size: 0.9rem;
   color: #444;
   text-align: center;
+  display: block; /* important: not grid */
+}
+
+
+
+/*Project video styling - dinofoot project*/
+.project-media-grid-dinofoot {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns for 2x2 grid */
+  gap: 1.5rem;
+  margin: 1.5rem auto;
+  width: 50%;
+  max-width: 1400px;
+  justify-content: center;
+} 
+.project-media-grid-dinofoot video {
+  width: 100%;
+  height: auto; /* keep aspect ratio */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: block;
+}
+.project-media-grid-dinofoot figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #444;
+  text-align: center;
+  display: block; /* important: not grid */
 }
 
 
